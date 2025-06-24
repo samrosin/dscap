@@ -1,4 +1,4 @@
-# Code for "Doubly Standardized Surrogate Endpoints for SARS-CoV-2 Vaccines" 
+# Simulation code for "Doubly Standardized Surrogate Endpoints for SARS-CoV-2 Vaccines" 
 
 This repository contains files for the simulation study in the manuscript "Doubly Standardized Surrogate Endpoints for SARS-CoV-2 Vaccines" by Rosin, S. P., Stivjen, F., Cross., K. A., Shook-Sa, B. E., Hudgens, M. G., & Gilbert, P. B. (2025). Simulations were conducted in R on a Slurm-managed High Performance Computing (HPC) cluster. In the below, **filenames are in bold text**. 
 
