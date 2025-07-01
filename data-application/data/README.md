@@ -13,14 +13,14 @@ synthetic data set `processed_data_synthetic.csv` with the same structure as
 the original with the synthetic data. These are saved in
 `original-vs-synthetic-data/`.
 
-The above Rscripts use data sets as input that cannot be shared. Hence, none of these Rscripts cannot be rerun
-by other researchers. The output data file of `generate-synthetic-data.R` (i.e., `processed_data_synthetic.csv`)
-is not included in this repo because it is too large. It is a simulated data set and can thus be shared. This file
+The above Rscripts use data sets as input that cannot be shared. Hence, none of these Rscripts can be rerun
+by other researchers. The data file output by `generate-synthetic-data.R` (i.e., `processed_data_synthetic.csv`)
+is not included in this repo because it is too large but it can be shared as it is a simulated data set. This file
 is shared as a supplementary file of the manuscript. 
 
 # Data
 
-`processed_data_synthetic.csv` contains the following variables:
+`processed_data_synthetic.csv` (and `processed_data.csv`) contains the following variables:
 
 * `A`. For placebo patients from any trial, we have `A = 0`. For vaccine patients,
 `A` varies from `1` to `8` where each integer corresponds to a different trial (or 
@@ -41,7 +41,7 @@ et al. (2022). The risk score is defined as the log of the predicted risk.
 * `Delta`. Case-cohort sampling indicator. `Delta = 1` if the patient was sampled to have
 the titers measured, `Delta = 0` otherwise.
 * `Age`. Age in years.
-* `trial`. This variables indicates the trial as a integer between `1` and `8` where each integer corresponds to a different trial (or 
+* `trial`. This variables indicates the trial as an integer between `1` and `8` where each integer corresponds to a different trial (or 
   trial subunit for J&J). This variable equals `A` for vaccine patients. 
 * `vax`. Treatment received. `vax = 0` for placebo patients, `vax = 1` for 
 patients who received the vaccine treatment. Note that the exact vaccine a patient 
@@ -49,7 +49,7 @@ received depends on the trial.
 * `CC_stratum`. Case-cohort stratum. Note that all placebo patients are assigned to 
 the `Placebo` stratum because their probability of having the titer measured is zero.
 * `trial.lbl`. Character vector indicating the name of the trial to which a patients belongs.
-This variables "corresponds" with the integers in `trial`.
+This variable matches with the integers in `trial`.
 * `BMI_underweight`, `BMI_normal`, `BMI_overweight`, and `BMI_obese`. Indicator variables
 for the BMI categories defined as follows:
   - Underweight: BMI < 18.5
@@ -62,14 +62,14 @@ for the BMI categories defined as follows:
 
 The "universal lower limit of detection" is defined as the maximum of the
 trial-specific lower limits of detection. The latter are defined as the lowest
-titer observed in any vaccine patients in the given trial.
+antibody marker observed in any vaccine patient in the given trial.
 
 Placebo patients get assigned this universal lower limit of detection to
-mainting consistency across treatment groups. A patient from the vaccine group
-with no measurable Abs has a titer equal to the lower limit of detection. A
-placebo patient, who by definition should have no measurable Abs, should have
-the same value. This would not be true if placebo patients get assigned a titer 
-value of zero (which seems reasonable at first sight).
+maintain consistency across treatment groups. A patient from the vaccine group
+with no measurable antibody marker has a value equal to the lower limit of detection. A
+placebo patient, who by definition should have no measurable antibodies, should have
+the same value. This would not be true if placebo patients get assigned a antibody marker 
+value of zero.
 
 
 # References
