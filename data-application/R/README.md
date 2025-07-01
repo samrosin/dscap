@@ -22,7 +22,7 @@ cannot be run without the original data.
   - Truncated target population. `1` for a truncated target population where only subjects
   from the target trial are retained whose risk score lies in the intersection of the supports for
   the risk score across the selected trials. `0` for no truncation (i.e., using the full population).
-  - Location of the data. Should be `"data/processed_data_synthetic.csv` for the 
+  - Location of the data. Should be `"data/processed_data_synthetic.csv"` for the 
   analysis with the synthetic data and `"data/processed_data.csv"` for the analysis 
   with the original data (which cannot be made available).
 * `plots_tables.R`. This Rscript takes the "raw results" saved in `results/raw-results/`
