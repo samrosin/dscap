@@ -1,6 +1,6 @@
-# Simulation code for "Doubly Standardized Surrogate Endpoints for SARS-CoV-2 Vaccines" 
+# Data-Application Code for "Doubly Standardized Surrogate Endpoints for SARS-CoV-2 Vaccines" 
 
-This directory contains the code used for the data application in the manuscript "Doubly Standardized Surrogate Endpoints for SARS-CoV-2 Vaccines" by Rosin, S. P., Stijven, F., Cross., K. A., Shook-Sa, B. E., Hudgens, M. G., & Gilbert, P. B. (2025).
+This directory contains the code used for the data application in the manuscript "Doubly Standardized Surrogate Endpoints for SARS-CoV-2 Vaccines" by Rosin, S. P., Stijven, F., Cross., K. A., Shook-Sa, B. E., Hudgens, M. G., & Gilbert, P. B. (2025). This directory is an R-project and contains all files (except data) needed to reproduce the results from the manuscript. Files that are produced by running code (i.e., tables and figures) are not included in this repo. 
 
 ## Project Structure
 
@@ -11,7 +11,7 @@ The project is organized into the following directories:
   Note that the original data are not included in this repository.
 * results/: When running the code, the results (including tables and figures) will be saved here.
 
-Each of thise directories contains its own README file. 
+These directories contain their own README files. 
 The Makefile allows one to run all Rscripts in the correct order by running `make all` in the console. 
 
 ## Reproducibility
@@ -21,7 +21,11 @@ The results with the synthetic data can be reproduced by executing the Makefile
 analyses (which produces results saved to `results/raw-results/`) and will
 produce all plots and tables presented in the paper (which are saved to
 `results/figures/` and `results/tables/`. Note that this requires the presence
-of `data/processed_data_synthetic.csv`. Reproducibility is also facilitated
+of `data/processed_data_synthetic.csv`. This file is not included in this repo 
+because it is too large, but is shared as a supplementary file as part of the 
+manuscript.
+
+Reproducibility is also facilitated
 through the use of the `renv` R package.
 
 Since the analyses are computationally intensive, we ran the analysis on a

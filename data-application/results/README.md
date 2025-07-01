@@ -1,10 +1,13 @@
 This directory contains three subdirectories which contain all results of the 
-analyses performed whith Rscripts located elsewhere in this repo. 
+analyses performed with Rscripts located elsewhere in this repo. Note that these
+directories are empty in the repo as the corresponding files are not tracked by git. 
+However, running all analyses by calling `make all` in the console with populate these 
+subdirectories with the files as described next. 
 
 `figures/` and `tables/` contain summaries of the results in the form of figures 
 and tables. 
 
-`raw-results/` contains the so-called raw results of the standardized analyses.
+`raw-results/` contains unprocessed results of the analyses.
 The following types of files are included, where an asterisk refers to unspecified
 text.
 
@@ -18,7 +21,7 @@ statistic.
 * `trt_effects_*`. Standardized and naive treatment effect estimates with standard errors and
 confidence intervals based on the sandwich estimator.
 * `vcov_*`. The sandwich estimator of the variance-covariance matrix for all parameter estimates. Note that, because
-we're using many stacked estimating equation to capture the uncertainty in all
+we're using many stacked estimating equations to capture the uncertainty in all
 parameters, this is a very large matrix containing superfluous information. For
 instance, the estimated variance for the case-cohort sampling proportions are
 included; these variance are not important.

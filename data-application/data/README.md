@@ -1,6 +1,6 @@
 # Rscripts
 
-This directory contains the two Rscripts. 
+This directory contains the three Rscripts. 
 
 * `read_data.R` reads in and combines the data sets from the different COVID-19 trials. The combined data set is saved as
 `CrossProtocolData.csv` (which is not included in the repo).
@@ -11,7 +11,12 @@ included in this repo.
 synthetic data set `processed_data_synthetic.csv` with the same structure as
 `processed_data.csv`. This script also generates figures and tables that compare
 the original with the synthetic data. These are saved in
-`original-vs-synthetic-data/`
+`original-vs-synthetic-data/`.
+
+The above Rscripts use data sets as input that cannot be shared. Hence, none of these Rscripts cannot be rerun
+by other researchers. The output data file of `generate-synthetic-data.R` (i.e., `processed_data_synthetic.csv`)
+is not included in this repo because it is too large. It is a simulated data set and can thus be shared. This file
+is shared as a supplementary file of the manuscript. 
 
 # Data
 
